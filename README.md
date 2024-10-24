@@ -1,3 +1,3 @@
 # muzumi
 muzumi desktop pet
-![alt text](muzumi.jpg)
+![alt text](muzumi/muzumi.jpg)

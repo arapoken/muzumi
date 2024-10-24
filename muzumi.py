@@ -41,11 +41,11 @@ def load_images(file_path, frame_count):
     return images
  
 # 读取图片
-idleRight = load_images("1.gif", 15)
-idleLeft = load_images("2.gif", 15)
-runRight = load_images("3.gif", 15)
-runLeft = load_images("4.gif", 15)
-fall = load_images("5.gif", 15)
+idleRight = load_images("muzumigif/1.gif", 15)
+idleLeft = load_images("muzumigif/2.gif", 15)
+runRight = load_images("muzumigif/3.gif", 15)
+runLeft = load_images("muzumigif/4.gif", 15)
+fall = load_images("muzumigif/5.gif", 15)
 del (idleRight[1])
 del (runLeft[1:3])
  

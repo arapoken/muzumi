@@ -1,13 +1,17 @@
 import tkinter as tk
 import pyautogui as pt
 import random
+import glob
 import os
-aaa= os.path.dirname(os.path.abspath(__file__))
+
+# 获取当前脚本路径并切换工作目录，确保资源文件正确加载
+aaa = os.path.dirname(os.path.abspath(__file__))
 print(aaa)
 os.chdir(aaa)
 retval = os.getcwd()
-print ("当前工作目录为 %s" % retval)
-flag=1
+print("当前工作目录为 %s"% retval)
+flag = 1
+
 # 获取主屏幕分辨率
 WIDTH, HEIGHT = pt.size()
 # 任务栏高度
@@ -41,6 +45,11 @@ def load_images(file_path, frame_count):
     return images
  
 # 读取图片
+gif_total_num = len(glob.glob(os.path.join("muzumigif", '*.gif')))
+gif = [0]*gif_total_num
+for j in range (0, gif_total_num):
+    gif[j] = load_images(f"muzumigif/{j+1}.gif", 15)
+
 idleRight = load_images("muzumigif/1.gif", 15)
 idleLeft = load_images("muzumigif/2.gif", 15)
 runRight = load_images("muzumigif/3.gif", 15)
